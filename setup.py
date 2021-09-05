@@ -4,7 +4,7 @@ import pathlib
 
 setuptools.setup(
     name='chunkedfile',
-    version='0.2.0',
+    version='0.3.0',
     description='Save file writes into multiple chunks.',
     url='http://github.com/danijar/chunkedfile',
     long_description=pathlib.Path('README.md').read_text(),

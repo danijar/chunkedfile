@@ -19,6 +19,12 @@ class ChunkedFile:
   def __exit__(self, exc_type, exc_val, exc_tb):
     self._write_chunk()
 
+  def __del__(self):
+    try:
+      self._write_chunk()
+    except Exception:
+      pass
+
   def write(self, text):
     if self.queue is None:
       self.queue = []
